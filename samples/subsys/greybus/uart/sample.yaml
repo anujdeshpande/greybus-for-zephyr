@@ -5,9 +5,11 @@ sample:
 tests:
   sample.greybus.uart:
     harness: greybus_uart
-    platform_whitelist: qemu_x86 cc1352r1_launchxl nrf52840dk_nrf52840
+    platform_whitelist: qemu_x86 cc1352r1_launchxl nrf52840dk_nrf52840 stm32f3_disco
     tags: greybus uart
   sample.greybus.uart.cc1352r1_launchxl:
     extra_args: OVERLAY_CONFIG="cc1352r1_launchxl.conf"
   sample.greybus.uart.nrf52840dk_nrf52840:
     extra_args: OVERLAY_CONFIG="nrf52840dk_nrf52840.conf"
+  sample.greybus.uart.stm32f3_disco:
+    extra_args: OVERLAY_CONFIG="stm32f3_disco.conf"
