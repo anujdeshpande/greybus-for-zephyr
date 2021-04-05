@@ -7,3 +7,7 @@ project(greybus-uart)
 zephyr_include_directories(../../../../../include)
 
 target_sources(app PRIVATE src/main.c)
+
+# if(CONFIG_PINMUX_MCUX_LPC)
+#   zephyr_library_sources(pinmux.c)
+# endif()
